@@ -1,0 +1,39 @@
+// FizzBuzz program for testing out JS
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>FizzBuzz<h1>
+
+<p id="demo"></p>
+
+<script>
+
+var text = "";
+function fizzBuzz(input) {
+	var output;
+	output = input;
+	if (input % 15 === 0) {
+		if (input % 5 !== 0) {
+			output = "fizz";
+		}
+		else if (input % 3 !== 0) {
+			output = "buzz";
+		}
+		else {
+			output = "fizzbuzz";
+		}
+	}
+	return output;
+}
+
+for (number = 0; number <= 100; number++) {
+	text += fizzBuzz(number) + "<br>";
+}
+
+document.getElementById("demo").innerHTML = text;
+
+</script>
+
+</body>
+</html>
